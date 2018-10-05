@@ -1,0 +1,10 @@
+---
+
+- name: configure a record
+  nios_host_record:
+    name: "{{ host_name }}.juniper.net"
+    ipv4:
+      - address: "{{ ipv4 }}"
+    state: present
+    view: Juniper
+    provider: "{{nios_provider}}"
